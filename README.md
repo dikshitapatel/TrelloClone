@@ -7,14 +7,8 @@ and improvement over sticky notes on whiteboard.
 * We have the following fields : id,change_id,change_description,task_id,change_id_type,updated_on
 * respectively for the entity.
 * Defined getter and setter methods.
-
-   ______________________________________________________________________________________________________________
-  | id  | change_description                       | change_id | change_id_type | updated_on          | task_id  |
-  |  1  | Comment added by Lilly : Great task      |    59     | comment id     | 2022-10-29 16:46:33 |    39    |
-  |  2  | User 7assigned to the task               |    7      |  user_id       | 2022-10-30 12:54:33 |    39    |
-  |  3  | Task Inserted                            |   62      |  task_id       | 2022-10-30 12:54:33 |    62    |
-  |  4  |Task state updated from : TODO to : DOING |   62      |  task_id       | 2022-10-30 12:54:33 |    62    |
-   --------------------------------------------------------------------------------------------------------------
+ ______________________________________________________________________________________________________________
+ 
 **HistoryController**
 * The HistoryController includes api history/{taskId} to get the history of task specified in the taskId* 
 
@@ -32,23 +26,11 @@ and improvement over sticky notes on whiteboard.
 * We have the following fields : taskId, description, state, toc (time of creation) respectively for the entity.
 * Defined getter and setter methods for the fields.
 
-    __________________________________________________________________________________
-  | task_id    | description      | state | toc                 | modified_on         | 
-  |  1         | OS assignemnt 2  | TODO  | 2022-10-29 16:46:33 | 2022-10-29 16:46:33 |
-  |  2         | OOD Project      | DOING | 2022-10-29 16:46:35 | 2022-10-30 12:54:33 |
-   -----------------------------------------------------------------------------------    
-
 2. User
 * User table will save user records with id, name
 * Defining an entity named user in the model.
 * We have the following fields : userId, name respectively for the entity.
 * Defined getter and setter methods for the fields.
-
-    _______________________
-   | user_id    | name     |
-   |  1         | John     |
-   |  2         | Jack     |
-   -------------------------     
 
 3. UserTask
 * UserTask will save taskId and the assigned userId in the table
@@ -62,12 +44,6 @@ and improvement over sticky notes on whiteboard.
 * We have the following fields : id, userId,taskId respectively for the entity.
 * The userId and taskId are foreign keys in the table with manyToOne relation
 * Defined getter and setter methods for the fields.
-
-  __________________________________________________________________________________
-  | id         | comment          | task_id                 | user_id              |
-  |  1         | Amazing task     | 1                       | 2                    |
-  |  2         | Great   task     | 1                       | 1                    |
-   --------------------------------------------------------------------------------- 
 
 5. CommentSchema
 * Class for getting userId and comment to create a new comment, used in createComment api
